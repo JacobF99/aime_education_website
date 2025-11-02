@@ -24,11 +24,17 @@
 			#intro {
 				background: #ffffff !important;
 			}
-			#intro h1, #intro p, #intro .button {
+			#intro h1, #intro .button {
 				color: #000000 !important;
 			}
 			#intro .button {
 				border-color: #000000 !important;
+			}
+			#intro p {
+				color: #FF903D !important;
+				font-weight: bold !important;
+				text-align: center !important;
+				font-size: 1.5em !important;
 			}
 			
 			/* Responsive logo sizing */
@@ -37,35 +43,97 @@
 				width: 90% !important;
 			}
 			
-			/* Pure white, larger text for main content sections */
-			#one h2, #two h2 {
+			/* "Who we are" section - orange background, white text */
+			#one > section:first-of-type,
+			#one > section:first-of-type .content {
+				background-color: #FF903D !important;
+			}
+			#one > section:first-of-type h2,
+			#one > section:first-of-type p,
+			#one > section:first-of-type .inner * {
 				color: #ffffff !important;
+			}
+			#one > section:first-of-type h2 {
 				font-weight: bold !important;
-				font-size: 1.1em !important;
+				font-size: 2em !important;
 				text-shadow: none !important;
 				opacity: 1 !important;
 			}
-			#one p, #two p, #two h3 {
-				color: #ffffff !important;
+			#one > section:first-of-type p {
 				font-weight: normal !important;
 				font-size: 1.1em !important;
 				text-shadow: none !important;
 				opacity: 1 !important;
 			}
 			
-			/* Black text for orange background sections */
-			#three h2, #three p, #three label, #three .button {
-				color: #000000 !important;
+			/* "Our Mission" section - light red background, white text */
+			#one > section:nth-of-type(2),
+			#one > section:nth-of-type(2) .content {
+				background-color: #F16055 !important;
+			}
+			#one > section:nth-of-type(2) h2,
+			#one > section:nth-of-type(2) p,
+			#one > section:nth-of-type(2) .content *,
+			#one > section:nth-of-type(2) .inner * {
+				color: #ffffff !important;
+			}
+			#one > section:nth-of-type(2) p {
+				font-size: 1.1em !important;
+			}
+			
+			/* Pure white, larger text for main content sections */
+			#two h2 {
+				color: #ffffff !important;
+				font-weight: bold !important;
+				font-size: 2em !important;
+				text-shadow: none !important;
+				opacity: 1 !important;
+			}
+			/* All h2 headers - increased size */
+			h2 {
+				font-size: 2em !important;
+				font-weight: bold !important;
+			}
+			#two p, #two h3 {
+				color: #ffffff !important;
+				font-weight: normal !important;
+				font-size: 1.1em !important;
+				text-shadow: none !important;
+				opacity: 1 !important;
+			}
+			/* h3 titles in features section - bold (more specific to override #two h3) */
+			#two .features section h3 {
+				font-weight: bold !important;
+			}
+			
+			/* Get in touch section - black background, white text */
+			#three {
+				background-color: #000000 !important;
+			}
+			#three h2, #three p, #three label, #three .button, 
+			#three .contact li h3, #three .contact li span, #three .contact li a,
+			#three input, #three textarea {
+				color: #ffffff !important;
 			}
 			#three input, #three textarea {
-				color: #000000 !important;
-				border-color: #000000 !important;
+				border-color: #ffffff !important;
+				background-color: #000000 !important;
 			}
-			#three .contact li h3, #three .contact li span, #three .contact li a {
-				color: #000000 !important;
+			#three input::placeholder, #three textarea::placeholder {
+				color: rgba(255, 255, 255, 0.7) !important;
+			}
+			
+			/* Footer - black background, white text */
+			#footer {
+				background-color: #000000 !important;
 			}
 			#footer .menu li {
-				color: #000000 !important;
+				color: #ffffff !important;
+			}
+			
+			/* Justified text alignment throughout */
+			p {
+				text-align: justify !important;
 			}
 		</style>
 	</head>
@@ -94,7 +162,8 @@
 							<div style="text-align: center; margin-bottom: 2em;">
 								<img src="images/aime-logo.png" alt="AIME Education Logo" style="max-width: 300px; height: auto;" />
 							</div>
-							<p>Empowering schools with expert-designed AI literacy courses to help their students excel as humans in the age of AI. Our goal is to reduce the gap between the forefront of research and the classroom curriculum to weeks, not years.</p>
+							<p>Empowering schools with expert-designed AI literacy courses to help their staff and students excel as humans in the age of AI.</p>
+							<p>Our goal is to reduce the gap between the forefront of research and the classroom curriculum to weeks, not years.</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
@@ -107,7 +176,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Who we are</h2>
-									<p>We are a network of Cambridge PhD students, with backgrounds in history, computer science, psychology, education, biology, English literature, digital humanities, and entrepreneurship – all at the forefront of the application of AI in our fields. As PhD students our knowledge stems from 'in the trenches' experience at the very edge of current practice in AI across industry and education. Our advisory board members (to be announced soon), include world-leading experts in AI Ethics, Education, and Digital Humanities.</p>
+									<p>We are a network of Cambridge PhD students, with backgrounds in History, Computer Science, Psychology, Education, Biology, English Literature, Digital Humanities, and Entrepreneurship – all at the forefront of the application of AI in our fields. As PhD students our knowledge stems from 'in the trenches' experience at the very edge of current practice in AI across industry and education.</p>
 								</div>
 							</div>
 						</section>
@@ -115,8 +184,8 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Our Mission</h2>
-									<p>AI is in the process of fundamentally reshaping education and the workplace. High-quality AI literacy education is a necessity to secure the future flourishing of humanity. AIME Education draws on the knowledge of a network of Cambridge PhD students working at the frontier of AI across a range of disciplines and translates this into high-quality online course content for 16-18-year-old school students.</p>
-									<p>Our first flagship course: Generative AI in Context, will cover all aspects of AI from the technology itself to its cultural, social, psychological, and ethical implications, giving schools the resources to help their students excel as humans in the age of AI.</p>
+									<p>AI is in the process of fundamentally reshaping education and the workplace. High-quality AI literacy education is a necessity to secure the future flourishing of humanity. AIME Education draws on the knowledge of a network of Cambridge PhD students working at the frontier of AI across a range of disciplines and translates this into high-quality online course content for 16-18-year-old school students. As well as training for school staff.</p>
+									<p>Our first flagship course: <strong>Generative AI in Context</strong>, will cover all aspects of AI from the technology itself to its cultural, social, psychological, ethical, and economic implications, giving schools the resources to help their staff and students excel as humans in the age of AI.</p>
 									<p>Our goal is to reduce the gap between the forefront of research and the classroom curriculum to weeks, not years. To do this we will use the vehicle of a continuously updated, high-quality online course that can be rolled out seamlessly to cohorts of school students, equipping them with the fundamental knowledge and tools to thrive in their next steps in life.</p>
 								</div>
 							</div>
@@ -127,37 +196,33 @@
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>What we do</h2>
-							<p>We are building three tiers of online AI literacy course for 16-18-year-olds, ranging from 10 to 30 hours of ready-to-go state-of-the-art content that teachers with any subject expertise can supervise in classrooms. We are looking for partner schools to run pilot-projects, gather data, and continually improve our course offerings.</p>
+							<p>We are building three tiers of online AI literacy course for 16-18-year-olds, ranging from 10 to 30 hours of ready-to-go state-of-the-art content that teachers with any subject expertise can supervise in classrooms. We are currently looking for partner schools to run pilot-projects, gather data, and continually improve our course offerings.</p>
+							<h2>What we mean by AI literacy</h2>
 							<div class="features">
 								<section>
+									<span class="icon solid major fa-history"></span>
+									<h3>History of AI</h3>
+									<p>Where did this technology come from, and how might its origins determine its current nature and future trajectory? How does AI compare to previous technological revolutions? What, if anything, can we learn from previous periods of rapid technological change?</p>
+								</section>
+								<section>
 									<span class="icon solid major fa-brain"></span>
-									<h3>AI Foundations</h3>
-									<p>Essential AI literacy covering core concepts, machine learning basics, and fundamental understanding of how AI systems work.</p>
+									<h3>AI Fundamentals</h3>
+									<p>How do key machine learning, linguistics, and statistics concepts change our understanding of and ability to master AI? What key insights emerge from a deeper understanding of the similarities and differences of digital and biological neural networks? How does a deeper understanding of the technology empower us to see likely future directions in its development and position ourselves advantageously?</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-graduation-cap"></span>
-									<h3>Generative AI in Context</h3>
-									<p>Our flagship course covering all aspects of AI from the technology itself to its cultural, social, psychological, and ethical implications.</p>
+									<span class="icon solid major fa-tools"></span>
+									<h3>AI in Practice</h3>
+									<p>What concrete tips, tools, and techniques can help us use AI more effectively to realise its benefits for study and work? Have we all become programmers now that the new programming language is human language, and what are the implications of this? How can we harness AI to build bespoke learning tools to supercharge our studies? How can we demonstrate our AI competency to future employers?</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-users"></span>
-									<h3>AI & Society</h3>
-									<p>Exploring the broader implications of AI on society, ethics, workplace transformation, and human flourishing.</p>
+									<span class="icon solid major fa-balance-scale"></span>
+									<h3>AI Risks and Ethical Considerations</h3>
+									<p>What are the true cognitive-health risks of AI usage and how can we manage these? What is social AI, how is it impacting society and is this the future we want? How is AI affecting culture, our relationship with art, authenticity, trust, and truth? What is the environmental and hidden-labour cost of AI? What are we to make of narratives about Artificial General Intelligence (AGI), and Superintelligence?</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-laptop"></span>
-									<h3>Ready-to-Go Content</h3>
-									<p>State-of-the-art course materials that teachers with any subject expertise can supervise in classrooms.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-chart-line"></span>
-									<h3>Continuous Updates</h3>
-									<p>Courses are continuously updated to reflect the latest AI research and developments, keeping curriculum current.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-handshake"></span>
-									<h3>Partner Schools</h3>
-									<p>We collaborate with schools to run pilot-projects, gather data, and continually improve our course offerings.</p>
+									<span class="icon solid major fa-briefcase"></span>
+									<h3>AI and the Future of Work</h3>
+									<p>What does it mean to have a non-human form of cognitive labour, and is there a longer history here? How is AI actually impacting the economy? How can we prepare ourselves for the future of the workplace? What competitive advantages do humans have and how can we emphasise and develop these? What narratives are in circulation around augmentation and replacement? How can we preserve the dignity and purpose of humanity in a rapidly automating world? What does it mean to be human now and in the future?</p>
 								</section>
 							</div>
 						</div>
