@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aimeeducation.github.io/</loc>
-    <lastmod>2025-10-27</lastmod>
+    <loc>https://aimeeducation.co.uk/</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aimeeducation.github.io/generic.html</loc>
-    <lastmod>2025-10-27</lastmod>
+    <loc>https://aimeeducation.co.uk/thank-you.html</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aimeeducation.github.io/elements.html</loc>
-    <lastmod>2025-10-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
 </urlset>
