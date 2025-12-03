@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aimeeducation.co.uk/sitemap.xml
